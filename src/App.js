@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Dashboard from './components/Dashboard/Dashboard';
 import AddClient from './components/Add-Client/Dashboard/AddClient';
 import AddClientPayment from './components/Add-Client/Payment-Setup/Dashboard/AddClientPayment';
+import AddThemeSetup from './components/Add-Client/ThemeSetUp/AddThemeSetup';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/dashboard/view-clients" element={<Dashboard />} />
         <Route path="/dashboard/add-client" element={<AddClient />} />
         <Route path="/dashboard/add-client/payment" element={<AddClientPayment />} />
+        <Route path="/dashboard/add-client/theme-setup" element={<AddThemeSetup />} />
       </Routes>
     </>
   );

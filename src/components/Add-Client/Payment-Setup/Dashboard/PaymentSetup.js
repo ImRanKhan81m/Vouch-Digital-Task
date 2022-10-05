@@ -2,9 +2,15 @@ import * as React from 'react';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function PaymentSetup() {
+  const navigate = useNavigate()
+
+  const handleNavigate = () => {
+    navigate('/dashboard/add-client/theme-setup')
+  }
   return (
     <React.Fragment>
       <h4 className='fw-bold'>View Clients</h4>
@@ -13,8 +19,8 @@ export default function PaymentSetup() {
       <div className='d-flex justify-content-evenly mt-3'>
         <p className='mb-0'><CheckCircleIcon className='text-success'/> CREATE PROFILE</p>
         <p className='profile-text'>02 PAYMENT SETUP</p>
-        <p>03 CREATE PROFILE</p>
-        <p>04 CREATE PROFILE</p>
+        <p>03 Theme Setup</p>
+        <p>04 Modules Setup</p>
       </div>
 
       <div>
@@ -79,7 +85,7 @@ export default function PaymentSetup() {
 
 
       <div className='mt-5 d-flex gap-5 mb-5'>
-        <div>
+        <div  onClick={handleNavigate}>
           <span className='profile-save'>Save & Continue <KeyboardArrowRightIcon /></span>
         </div>
         <div className='reset'> <RestartAltIcon /> Reset</div>

@@ -20,8 +20,8 @@ export default function CreateProfile() {
       <div className='d-flex justify-content-evenly mt-3'>
         <p className='profile-text'>01 CREATE PROFILE</p>
         <p>02 PAYMENT SETUP</p>
-        <p>03 CREATE PROFILE</p>
-        <p>04 CREATE PROFILE</p>
+        <p>03 Theme Setup</p>
+        <p>04 Modules Setup</p>
       </div>
 
       <div>
