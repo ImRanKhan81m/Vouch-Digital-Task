@@ -174,7 +174,7 @@ function DashboardContent() {
             <Copyright sx={{ pt: 4 }} />
           </div>
         </Box>
-      </Box>
+      </Box> 
     </ThemeProvider>
   );
 }
