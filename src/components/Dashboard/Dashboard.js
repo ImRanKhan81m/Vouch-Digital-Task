@@ -118,7 +118,7 @@ function DashboardContent() {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Dashboard
+              Vouch Digital
             </Typography>
             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
@@ -142,9 +142,13 @@ function DashboardContent() {
           </Toolbar>
           <Divider />
           <List component="nav">
+            {/* <div className='px-3 mt-3'>
+              <h5>Vouch Digital</h5>
+              <input className='rounded-pill py-2 ps-3' type="search" name="search" placeholder='Search' />
+            </div> */}
             {mainListItems}
-            <Divider sx={{ my: 1 }} />
-            {secondaryListItems}
+            {/* <Divider sx={{ my: 1 }} /> */}
+            {/* {secondaryListItems} */}
           </List>
         </Drawer>
         <Box
