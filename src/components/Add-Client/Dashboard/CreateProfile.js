@@ -2,9 +2,16 @@ import * as React from 'react';
 import './AddClient.css'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function CreateProfile() {
+  const navigate = useNavigate()
+
+  const handleNavigate = () => {
+    navigate('/dashboard/add-client/payment')
+  }
+
   return (
     <React.Fragment>
       <h4 className='fw-bold'>View Clients</h4>
@@ -33,14 +40,14 @@ export default function CreateProfile() {
       </div>
 
       <div className='d-flex gap-3 mt-4'>
-        <div>
+        <div className='first-input'>
           <input className='input-field' placeholder='Company Name' type="input" name="" />
           <input className='input-field' placeholder='Category' type="" name="" />
           <input className='input-field' placeholder='Company Email Address' type="email" name="" />
           <input className='input-field' placeholder='State' type="" name="" />
           <input className='input-field' placeholder='GST Number' type="number " name="" />
         </div>
-        <div>
+        <div className='second-input'>
           <input className='input-field' placeholder='Website' type="input" name="" />
           <input className='input-field' placeholder='Select Management Company' type="" name="" />
           <input className='input-field' placeholder='Mobile Number' type="number" name="" />
@@ -50,7 +57,7 @@ export default function CreateProfile() {
       </div>
 
       <div className='mt-4 d-flex gap-5 mb-5'>
-        <div>
+        <div onClick={handleNavigate}>
           <span className='profile-save'>Save & Continue <KeyboardArrowRightIcon /></span>
         </div>
         <div className='reset'> <RestartAltIcon /> Reset</div>
