@@ -35,6 +35,21 @@ body {
   cursor: pointer;
 }
 
+.add-clients{
+  background-color: #153AC7 !important;
+  color: white !important;
+  font-family: 'Nunito', sans-serif !important;
+}
+.client-text{
+  text-decoration: none !important;
+}
+.view-client{
+  background-color: #153AC7 !important;
+  color: white !important;
+  font-family: 'Nunito', sans-serif !important;
+  text-decoration: none !important;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

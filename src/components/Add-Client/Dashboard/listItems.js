@@ -10,21 +10,21 @@ import { Link } from 'react-router-dom';
 
 export const mainListItems = (
   <React.Fragment>
-      <ListItemButton className='view-client mb-2'>
+    <Link to='/dashboard/view-clients'>
+      <ListItemButton className='mb-2 '>
         <ListItemIcon>
           <DashboardIcon />
         </ListItemIcon>
-        <ListItemText className='client-text' >View Clients</ListItemText>
-      </ListItemButton>
-
-    <Link to='/dashboard/add-client'>
-      <ListItemButton>
-        <ListItemIcon>
-          <PeopleIcon />
-        </ListItemIcon>
-        <ListItemText className='client-text' primary="Add Client" />
+        <ListItemText className='client-text' primary="View Clients" />
       </ListItemButton>
     </Link>
+
+    <ListItemButton className='add-clients'>
+      <ListItemIcon>
+        <PeopleIcon />
+      </ListItemIcon>
+      <ListItemText className='client-text' primary="Add Client" />
+    </ListItemButton>
   </React.Fragment>
 );
 

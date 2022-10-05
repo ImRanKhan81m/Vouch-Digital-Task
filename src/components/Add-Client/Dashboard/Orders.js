@@ -34,7 +34,7 @@ export default function Orders() {
     <React.Fragment>
       <h4 className='fw-bold'>View Clients</h4>
       <p><span className='fw-bold'>Client Master </span>/ View Clients</p>
-      <Table >
+      {/* <Table >
         <TableHead>
           <TableRow>
             <TableCell>Company Name</TableCell>
@@ -63,7 +63,7 @@ export default function Orders() {
             </TableRow>
           ))}
         </TableBody>
-      </Table>
+      </Table> */}
       <Link color="primary" href="#" onClick={preventDefault} sx={{ mt: 3 }}>
         See more orders
       </Link>
