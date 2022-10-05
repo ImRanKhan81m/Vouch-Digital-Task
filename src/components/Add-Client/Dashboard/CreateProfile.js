@@ -22,11 +22,28 @@ export default function CreateProfile() {
 
       <div className='d-flex gap-3 align-items-center'>
         <div>
-          <input className='profile-input' type="" name="" placeholder='+' />
+          <input disabled className='profile-input' type="" name="" placeholder='+' />
         </div>
         <div>
           <h5 className='mb-0 fw-bold'>Company Logo</h5>
           <p className='mb-0'><small>Logo ratio should be 1:1 and should be 120px X 120 px</small></p>
+        </div>
+      </div>
+
+      <div className='d-flex gap-3 mt-4'>
+        <div>
+          <input className='input-field' placeholder='Company Name' type="input" name="" />
+          <input className='input-field' placeholder='Category' type="" name="" />
+          <input className='input-field' placeholder='Company Email Address' type="email" name="" />
+          <input className='input-field' placeholder='State' type="" name="" />
+          <input className='input-field' placeholder='GST Number' type="number " name="" />
+        </div>
+        <div>
+          <input className='input-field' placeholder='Website' type="input" name="" />
+          <input className='input-field' placeholder='Select Management Company' type="" name="" />
+          <input className='input-field' placeholder='Mobile Number' type="number" name="" />
+          <input className='input-field' placeholder='City' type="" name="" />
+          <input className='input-field' placeholder='Fax Number' type="number" name="" />
         </div>
       </div>
     </React.Fragment>
