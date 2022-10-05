@@ -20,6 +20,20 @@
     margin-bottom: 15px;
     border: 1px solid #dddddd;
     border-radius: 5px;
-    color: #dddddd !important;
     font-weight: 400;
+}
+.profile-save{
+    background-color: #1976D2;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 700;
+    width: 100%;
+    cursor: pointer;
+}
+.reset{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }

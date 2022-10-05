@@ -1,5 +1,7 @@
 import * as React from 'react';
 import './AddClient.css'
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import RestartAltIcon from '@mui/icons-material/RestartAlt';
 
 
 export default function CreateProfile() {
@@ -45,6 +47,13 @@ export default function CreateProfile() {
           <input className='input-field' placeholder='City' type="" name="" />
           <input className='input-field' placeholder='Fax Number' type="number" name="" />
         </div>
+      </div>
+
+      <div className='mt-4 d-flex gap-5 mb-5'>
+        <div>
+          <span className='profile-save'>Save & Continue <KeyboardArrowRightIcon /></span>
+        </div>
+        <div className='reset'> <RestartAltIcon /> Reset</div>
       </div>
     </React.Fragment>
   );
