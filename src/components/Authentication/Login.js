@@ -4,15 +4,23 @@ import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import './Login.css'
 import Form from 'react-bootstrap/Form';
+import AuthUser from './AuthUser';
 
 const Login = () => {
     const { register, formState: { errors }, handleSubmit, trigger, reset } = useForm();
     const [loading, setLoading] = useState(false);
+    const { http, setToken } = AuthUser();
 
     const onSubmitForm = async (data) => {
-        setLoading(true);
-        console.log(data);
-        setLoading(false);
+        console.log(data.email)
+        http.post("/login/", { email: data.email, password: data.password }).then((res) => {
+            // setToken(res.data.data.email, res.data.data.access, res.data.data.role);
+            setLoading(false);
+            console.log(data)
+        }).catch((err) => {
+            setLoading(false);
+            console.log(err)
+        })
         reset();
     }
 
@@ -28,7 +36,7 @@ const Login = () => {
                     <Form onSubmit={handleSubmit(onSubmitForm)}
                         className='text-start'>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Control className='py-2' type="email" placeholder="Enter email"
+                            <Form.Control className='py-2' type="email" name='email' placeholder="Enter email"
                                 {...register("email", {
                                     required: 'Email is required',
                                     pattern: {
@@ -58,7 +66,7 @@ const Login = () => {
                             />
                             <small className='text-danger ml-2 my-2'>{errors?.password?.message}</small>
                         </Form.Group>
-                        <button className='btn btn-primary form-btn' type="">Login</button>
+                        <button className='btn btn-primary form-btn' type="submit">Login</button>
                     </Form>
                 </div>
             </div>
