@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 export const mainListItems = (
   <React.Fragment>
     <Link to='/dashboard/view-clients'>
-      <ListItemButton className='mb-2 '>
+      <ListItemButton>
         <ListItemIcon>
           <DashboardIcon />
         </ListItemIcon>
