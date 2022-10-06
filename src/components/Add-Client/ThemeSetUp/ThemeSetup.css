@@ -1,0 +1,27 @@
+.left{
+    width: 120px;
+    height: 84px;
+    background-color: #F5F5F5;
+    padding: 20px;
+    border-radius: 5px;
+}
+.left-child{
+    width: 32px !important;
+    height: 40px !important;
+    background-color: #153AC7;
+    border-radius: 5px;
+}
+.left-child2{
+    width: 32px !important;
+    height: 40px !important;
+    background-color: #153AC7;
+    border-radius: 5px;
+    margin-left: 50px;
+}
+.left-child3{
+    width: 32px !important;
+    height: 40px !important;
+    background-color: #153AC7;
+    border-radius: 5px;
+    margin: auto;
+}

@@ -9,6 +9,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import SearchIcon from '@mui/icons-material/Search';
 import './Order.css'
 import { Pagination } from '@mui/material';
+import PositionedMenu from './Action';
 
 // Generate Order Data
 function createData(id, date, name, shipTo, paymentMethod, amount, sites, Tenants, Group, Action) {
@@ -67,7 +68,8 @@ export default function Orders() {
               <TableCell>{row.sites}</TableCell>
               <TableCell>{row.Tenants}</TableCell>
               <TableCell>{row.Group}</TableCell>
-              <TableCell><MoreVertIcon className='action' /></TableCell>
+              {/* <TableCell><MoreVertIcon className='action' /></TableCell> */}
+              <TableCell><PositionedMenu/></TableCell>
             </TableRow>
           ))}
         </TableBody>
