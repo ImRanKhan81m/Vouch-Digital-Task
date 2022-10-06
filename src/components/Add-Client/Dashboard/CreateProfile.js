@@ -14,7 +14,7 @@ export default function CreateProfile() {
 
   return (
     <React.Fragment>
-      <h4 className='fw-bold'>View Clients</h4>
+      <h4 className='fw-bold'>Add Client</h4>
       <p><span className='fw-bold'>Client Master / Add Client</span> / Create Profile</p>
 
       <div className='d-flex justify-content-evenly mt-3'>

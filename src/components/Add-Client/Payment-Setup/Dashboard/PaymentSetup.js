@@ -13,8 +13,8 @@ export default function PaymentSetup() {
   }
   return (
     <React.Fragment>
-      <h4 className='fw-bold'>View Clients</h4>
-      <p><span className='fw-bold'>Client Master / Add Client</span> / Create Profile</p>
+      <h4 className='fw-bold'>Add Client</h4>
+      <p><span className='fw-bold'>Client Master / Add Client</span> / Payment Setup</p>
 
       <div className='d-flex justify-content-evenly mt-3'>
         <p className='mb-0'><CheckCircleIcon className='text-success'/> CREATE PROFILE</p>
