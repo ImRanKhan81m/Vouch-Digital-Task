@@ -4,9 +4,16 @@ import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { FormControlLabel, Radio, TextField } from '@mui/material';
 import './ThemeSetup.css'
+import { useNavigate } from 'react-router-dom';
 
 
 export default function ThemeSetup() {
+  const navigate = useNavigate()
+
+  const handleNavigate = () => {
+    navigate('/dashboard/add-client/module-setup')
+  }
+
   return (
     <React.Fragment>
       <h4 className='fw-bold'>Add Client</h4>
@@ -82,7 +89,7 @@ export default function ThemeSetup() {
 
 
       <div className='mt-5 d-flex gap-5 mb-5'>
-        <div>
+        <div  onClick={handleNavigate}>
           <span className='profile-save'>Save & Continue <KeyboardArrowRightIcon /></span>
         </div>
         <div className='reset'> <RestartAltIcon /> Reset</div>
