@@ -1,27 +1,26 @@
 
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Login.css'
 import Form from 'react-bootstrap/Form';
-import AuthUser from './AuthUser';
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const Login = () => {
     const { register, formState: { errors }, handleSubmit, trigger, reset } = useForm();
-    const [loading, setLoading] = useState(false);
-    const { http, setToken } = AuthUser();
+    // const [loading, setLoading] = useState(false);
+    const navigate = useNavigate()
 
     const onSubmitForm = async (data) => {
-        console.log(data.email)
-        http.post("/login/", { email: data.email, password: data.password }).then((res) => {
-            // setToken(res.data.data.email, res.data.data.access, res.data.data.role);
-            setLoading(false);
-            console.log(data)
-        }).catch((err) => {
-            setLoading(false);
-            console.log(err)
-        })
-        reset();
+        const res = await axios.post('https://reqres.in/api/login', data);
+        if (res.status === 200) {
+            localStorage.setItem('token', res.data.token);
+            navigate('/dashboard/view-clients')
+        }else{
+            toast("Wrong email or password")
+            console.log("Wrong email or password")
+        }
     }
 
     return (
@@ -69,9 +68,6 @@ const Login = () => {
                         <button className='btn btn-primary form-btn' type="submit">Login</button>
                     </Form>
                 </div>
-            </div>
-            <div className='image'>
-
             </div>
         </div>
     );
