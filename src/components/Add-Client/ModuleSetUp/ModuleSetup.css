@@ -1,0 +1,33 @@
+.task {
+    background-color: #1976D2 !important;
+    padding: 8px 3px;
+    border-radius: 5px;
+    color: white;
+}
+.tasks{
+    border : 1px solid #dddd;
+    padding: 25px;
+    border-radius: 5px;
+}
+.checkbox-left{
+    width: 20% !important;
+}
+.checkbox-right{
+    width: 80% !important;
+}
+.task-parent{
+    border-bottom: 1px solid #dddd;
+    padding-bottom: 20px;
+}
+.task-left{
+    width: 80% !important;
+}
+.task-right{
+    width: 20% !important;
+    background-color: #1976D2;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
